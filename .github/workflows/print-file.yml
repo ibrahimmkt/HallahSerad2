@@ -1,0 +1,17 @@
+name: Print File Content
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  print_file:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout the code
+        uses: actions/checkout@v3
+
+      - name: Print content of Szymon.txt
+        run: cat Szymon.txt
